@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { ListaCatalagoComponent } from '../lista-catalago/lista-catalago.component';
-
+import { CarouselComponent } from '../carousel/carousel.component';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [ListaCatalagoComponent],
+  imports: [ CarouselComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
