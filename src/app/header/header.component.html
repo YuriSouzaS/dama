@@ -1,57 +1,36 @@
 <header>
+  <nav class="navbar" style="background-color:  rgb(24, 24, 248);">
+    <a class="navbar-brand link-light" aria-current="page" href="/home-page" routerLink="/home-page"
+      routerLinkActive="activebutton" ariaCurrentWhenActive="page">
+      <img src="favicon.svg" alt="Logo Merlin" width="30" height="30" class="d-inline-block align-text-top">
+      Merlin
+    </a>
 
-  <nav class="navbar navbar-expand-lg " style="background-color:  rgb(24, 24, 248);">
-    <div class="container-fluid">
-      <a class="navbar-brand link-light" href="#">
-        <img src="favicon.svg" alt="Logo Merlin" width="30" height="30" class="d-inline-block align-text-top">
-        Merlin
+    <div class="nav-item">
+      <a class="nav-link button active link-light" href="/product-page" routerLink="/product-page"
+        routerLinkActive="activebutton" ariaCurrentWhenActive="page">Ofertas do dia
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active link-light" aria-current="page" href="/home-page" routerLink="/home-page"
-              routerLinkActive="activebutton" ariaCurrentWhenActive="page">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link button active link-light" href="/product-page" routerLink="/product-page"
-              routerLinkActive="activebutton" ariaCurrentWhenActive="page">Ofertas do dia</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active link-light" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Departamentos
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Frutas</a></li>
-              <li><a class="dropdown-item" href="#">Legumes e Vergetais</a></li>
-              <li><a class="dropdown-item" href="#">Cereais</a></li>
-              <li><a class="dropdown-item" href="#">Leite e Derivados</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Ração para pets</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Qual é seu desejo hoje?" aria-label="Search">
-        </form>
-
-        <!-- Menu Login -->
-        <a class="btn " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-          <span class="material-symbols-outlined" style="color:white;">
-            login
-            </span>
-        </a>
-      </div>
     </div>
+
+    <div class="nav-item">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Qual é seu desejo hoje?" aria-label="Search">
+      </form>
+
+    </div>
+    <div>
+      <!-- Barra lateral, tela de Login -->
+      <a class="btn " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        <span class="material-symbols-outlined" style="color:white;">
+          login
+        </span>
+      </a>
+    </div>
+
   </nav>
 
-<app-lista-catalago />
+  <app-lista-catalago />
 
 </header>
 
