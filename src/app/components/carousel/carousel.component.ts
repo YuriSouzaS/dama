@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-carousel',
@@ -7,6 +8,9 @@ import { Component } from '@angular/core';
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.css'
 })
-export class CarouselComponent {
+export class CarouselComponent  {
+
+
+  constructor() { }
 
 }
