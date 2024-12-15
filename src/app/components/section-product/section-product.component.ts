@@ -11,5 +11,6 @@ export class SectionProductComponent {
   image: string = "imgs/queijos.png";
   name: string = "Pão italiano";
   price: number = 0.25;
+  amount: number = 100;
 
 }

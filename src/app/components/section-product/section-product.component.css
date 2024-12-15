@@ -1,0 +1,317 @@
+/* .text-focus-in {
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+} */
+
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+
+.cardd {
+    margin: 10px;
+}
+
+img {
+    padding: 10px;
+}
+
+.cardd {
+    --accent-color:  rgb(20, 20, 192);
+    position: relative;
+    width: 240px;
+    background: white;
+    border-radius: 1rem;
+    padding: 0.3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 50px 30px -20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.cardd .image-container {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    border-radius: 0.7rem;
+    border-top-right-radius: 4rem;
+    margin-bottom: 1rem;
+}
+
+.cardd .image-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.cardd .image-container .svg {
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+}
+
+.cardd .image-container .price {
+    position: absolute;
+    right: 0.7rem;
+    bottom: -1rem;
+    background: white;
+    color: var(--accent-color);
+    font-weight: 900;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 1rem 1rem 2rem 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 15px 0px;
+}
+
+.cardd .favorite {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.cardd .favorite input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.cardd .favorite input:checked~svg {
+    fill: #a8a8a8;
+    animation: bouncing 0.5s;
+}
+
+.cardd .favorite svg {
+    fill: rgb(255, 95, 95);
+    filter: drop-shadow(0px 3px 1px rgba(53, 53, 53, 0.14));
+}
+
+.cardd .content {
+    padding: 0px 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.cardd .content .brand {
+    font-weight: 900;
+    color: #a6a6a6;
+}
+
+.cardd .content .product-name {
+    font-weight: 700;
+    color: #666666;
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.cardd .content .color-size-container {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #a8a8a8;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cardd .content .color-size-container>* {
+    flex: 1;
+}
+
+.cardd .content .color-size-container .colors .colors-container {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.3rem;
+    font-size: 0.5rem;
+    margin-top: 0.2rem;
+}
+
+.cardd .content .color-size-container .colors .colors-container .color {
+    height: 14px;
+    position: relative;
+}
+
+.cardd .content .color-size-container .colors .colors-container .color:hover .color-name {
+    display: block;
+}
+
+.cardd .content .color-size-container .colors .colors-container .color a {
+    display: inline-block;
+    height: 100%;
+    aspect-ratio: 1;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.cardd .content .color-size-container .colors .colors-container .color .color-name {
+    display: none;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    background: black;
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.cardd .content .color-size-container .colors .colors-container .color:first-child a {
+    border-color: #ffd426;
+}
+
+.cardd .content .color-size-container .colors .colors-container .color:nth-child(2) a {
+    background: #144076;
+}
+
+.cardd .content .color-size-container .colors .colors-container .color:nth-child(3) a {
+    border-color: #00b9ff;
+}
+
+.cardd .content .color-size-container .colors .colors-container .color:nth-child(4) a {
+    border-color: #ff6ba1;
+}
+
+.cardd .content .color-size-container .colors .colors-container .active {
+    border-color: black;
+}
+
+.cardd .content .color-size-container .sizes .size-container {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+}
+
+.cardd .content .color-size-container .sizes .size-container .size {
+    height: 14px;
+}
+
+.cardd .content .color-size-container .sizes .size-container .size .size-radio {
+    cursor: pointer;
+}
+
+.cardd .content .color-size-container .sizes .size-container .size .size-radio input {
+    display: none;
+}
+
+.cardd .content .color-size-container .sizes .size-container .size .size-radio input:checked~.name {
+    background: var(--accent-color);
+    border-radius: 2rem 2rem 1.5rem 1.5rem;
+    color: white;
+}
+
+.cardd .content .color-size-container .sizes .size-container .size .size-radio .name {
+    display: grid;
+    place-content: center;
+    height: 100%;
+    aspect-ratio: 1.2/1;
+    text-decoration: none;
+    color: #484848;
+    font-size: 0.5rem;
+    text-align: center;
+}
+
+.cardd .content .rating {
+    color: #a8a8a8;
+    font-size: 0.6rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cardd .content .rating svg {
+    height: 12px;
+}
+
+.cardd .button-container {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.cardd .button-container .button {
+    border-radius: 1.4rem 1.4rem 0.7rem 0.7rem;
+    border: none;
+    padding: 0.5rem 0;
+    background: var(--accent-color);
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.cardd .button-container .button:hover {
+    background: var(--primary-color);
+    color: var(--accent-color);
+}
+
+.cardd .button-container .buy-button {
+    flex: auto;
+}
+
+.cardd .button-container .cart-button {
+    display: grid;
+    place-content: center;
+    width: 50px;
+}
+
+.cardd .button-container .cart-button svg {
+    width: 15px;
+    fill: white;
+}
+
+.cardd:hover {
+    transform: scale(1.03);
+}
+
+@keyframes bouncing {
+
+    from,
+    to {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(1.5, 2.1);
+    }
+
+    50% {
+        transform: scale(2.1, 1.5);
+    }
+
+    75% {
+        transform: scale(1.5, 2.05);
+    }
+}
